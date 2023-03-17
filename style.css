@@ -4,28 +4,31 @@
     font-family: Arial, "MS Sans Serif", sans-serif;
     background-color: #f0f0f0;
 }
+
 .mainhead {
     text-align: center;
     font-family: cursive;
 }
+
 .secheading {
     font-family: cursive;
 }
-.secleft {
-    width: 80%;
-    margin-left: 2%;
-/*    justify-content: left; */
-    text-align: justify;
-    text-justify: inter-word;
-    background-color: #f8f8f8;
-/*    border: 1px solid red; */
-}
-.secright {
+
+.secwhole:nth-child(odd) {
     width: 80%;
     margin-left: 18%;
-/*    justify-content: right; */
     text-align: justify;
     text-justify: inter-word;
+}
+
+.secwhole:nth-child(even) {
+    width: 80%;
+    margin-left: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.sectext {
+    display: flex;
     background-color: #f8f8f8;
-/*    border: 1px solid orange; */
 }
