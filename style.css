@@ -13,15 +13,19 @@
 }
 .secleft {
     width: 80%;
-    margin-left: 0%;
-    justify-content: left;
+    margin-left: 2%;
+/*    justify-content: left; */
+    text-align: justify;
+    text-justify: inter-word;
     background-color: #f8f8f8;
 /*    border: 1px solid red; */
 }
 .secright {
     width: 80%;
-    margin-left: 20%;
-    justify-content: right;
+    margin-left: 18%;
+/*    justify-content: right; */
+    text-align: justify;
+    text-justify: inter-word;
     background-color: #f8f8f8;
 /*    border: 1px solid orange; */
 }
