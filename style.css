@@ -5,30 +5,54 @@
     background-color: #f0f0f0;
 }
 
-.mainhead {
+.mainHead {
     text-align: center;
     font-family: cursive;
 }
 
-.secheading {
+.secWhole:nth-child(odd) {
+    width: 80%;
+    margin-left: 18%;
+    display: flex;
+    text-align: justify;
+    text-justify: inter-word;
+    flex-direction: column;
+}
+
+.secWhole:nth-child(even) {
+    width: 80%;
+    margin-left: 2%;
+    display: flex;
+    text-align: justify;
+    text-justify: inter-word;
+    flex-direction: column;
+}
+
+.secHeading {
     font-family: cursive;
 }
 
-.secwhole:nth-child(odd) {
-    width: 80%;
-    margin-left: 18%;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.secwhole:nth-child(even) {
-    width: 80%;
-    margin-left: 2%;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.sectext {
+.info {
     display: flex;
+    width: 100%;
+ }
+
+.secText {
+    display: flex;
+    flex-direction: column;
     background-color: #f8f8f8;
 }
+
+.divOne:nth-child(odd) {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+ }
+
+ .divOne:nth-child(even) {
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+ }
+
+ 
