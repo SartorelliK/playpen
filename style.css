@@ -14,8 +14,6 @@
     width: 80%;
     margin-left: 18%;
     display: flex;
-    text-align: justify;
-    text-justify: inter-word;
     flex-direction: column;
 }
 
@@ -23,8 +21,6 @@
     width: 80%;
     margin-left: 2%;
     display: flex;
-    text-align: justify;
-    text-justify: inter-word;
     flex-direction: column;
 }
 
@@ -37,22 +33,32 @@
     width: 100%;
  }
 
-.secText {
-    display: flex;
-    flex-direction: column;
+ /* Always odd as inside parent */
+.secText:nth-child(odd) {
     background-color: #f8f8f8;
+    justify-content: flex-end;
+    text-align: justify;
+    text-justify: inter-word;
+    order: 1;
 }
 
+.secText:nth-child(even) {
+    background-color: #f8f8f8;
+    justify-content: flex-end;
+    text-align: justify;
+    text-justify: inter-word;
+    order: -1;
+}
+
+/* Always odd as inside parent */
 .divOne:nth-child(odd) {
     width: 20%;
-    display: flex;
-    justify-content: flex-end;
+ /*   order: -1;*/
  }
 
  .divOne:nth-child(even) {
     width: 20%;
-    display: flex;
-    justify-content: flex-start;
+    order: 1;
  }
 
  
