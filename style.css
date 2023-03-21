@@ -33,32 +33,23 @@
     width: 100%;
  }
 
- /* Always odd as inside parent */
-.secText:nth-child(odd) {
-    background-color: #f8f8f8;
+ .secText {
+    background-color: #f8f8f8; 
     justify-content: flex-end;
     text-align: justify;
     text-justify: inter-word;
-    order: 1;
-}
-
-.secText:nth-child(even) {
-    background-color: #f8f8f8;
-    justify-content: flex-end;
-    text-align: justify;
-    text-justify: inter-word;
-    order: -1;
-}
-
-/* Always odd as inside parent */
-.divOne:nth-child(odd) {
-    width: 20%;
- /*   order: -1;*/
+    display: flex;
  }
 
- .divOne:nth-child(even) {
+.divOne {
     width: 20%;
-    order: 1;
- }
+    display: flex;
+}
 
- 
+.secWhole:nth-child(odd) > div.info {
+    flex-direction: row;
+}
+
+.secWhole:nth-child(even) > div.info {
+    flex-direction: row-reverse;
+}
