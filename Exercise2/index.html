@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Kevins ToDo List</title>
-		<link rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <script src='./script.js' defer></script>
-	</head>
-	<body>
-        <h1></h1>
-		<form>
-			<input type="text"/>
-			<button type="submit">Submit</button>
-		</form>
-        
-		<pre></pre>
-		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevins ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src='./script.js' defer></script>
+</head>
+<body>
+    <h1 class="mainHead">Kevin's ToDo List</h1>
+
+    <section class="optionBox">
+        <div class="options">
+            <h2 class="optionHead">Add</h2>
+            <br /><br />
+            <div class="optionCenter">
+                <form>
+                    <label for="item">Item: </label>
+                    <input type="text" id="item" name="item"><br /><br />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>    
+        <div class="options">
+            <h2  class="optionHead">Edit</h2>
+        </div>    
+        <div class="options">
+            <h2  class="optionHead">Delete</h2>
+        </div>    
+        <div class="options">
+            <h2  class="optionHead">Display</h2>
+        </div>    
+    </section>
+
+</body>
 </html>
