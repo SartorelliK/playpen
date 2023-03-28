@@ -9,16 +9,16 @@ let todos = []
 
 // Output the todo items
 function listtodos(s) {
-    sarray = JSON.parse(s);
+    sarray = JSON.parse(s);						// Turn string back into an array
 	var i = 0;
-	while(i < sarray.length) {
+	while(i < sarray.length) {					// Go through the entire array
 		formString = '<input type="radio" id="' + sarray[i].id + '" value="' + sarray[i].text + '">'
 		formString += '<label for="' + sarray[i].id + '">' + sarray[i].text + '</label><br />'
 		console.log(formString)
-		var p = document.createElement("p"); // Create a <p> element
+		var p = document.createElement("p"); 	// Create a <p> element
 		var t = document.createTextNode(formString); // Create a text node
 		p.appendChild(t);
-		document.getElementById("listed").appendChild(p);
+		document.getElementById("listed").appendChild(p); // Output to element called 'listed'
 		i++
 	}
 
@@ -38,10 +38,10 @@ form.addEventListener("submit", (e) => {
 
 //    console.log(stringed)						// Display on console for debugging
 
-	const stringed1 = localStorage.getItem("todos");
-	todos = JSON.parse(stringed1)
+//	const stringed1 = localStorage.getItem("todos");
+//	todos = JSON.parse(stringed1)
 
-    listtodos(stringed)
+    listtodos(stringed)							// Output the array as entries in a radio button form
 
 //    todos.map((todo) => (
 //        <h1 key={todo.id} >{todo.text}</h1>  // ERROR
