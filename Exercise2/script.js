@@ -7,6 +7,23 @@ let nanoid=(t=21)=>crypto.getRandomValues(new Uint8Array(t)).reduce(((t,e)=>t+=(
 
 let todos = []
 
+// Output the todo items
+function listtodos(s) {
+    sarray = JSON.parse(s);
+	var i = 0;
+	while(i < sarray.length) {
+		formString = '<input type="radio" id="' + sarray[i].id + '" value="' + sarray[i].text + '">'
+		formString += '<label for="' + sarray[i].id + '">' + sarray[i].text + '</label><br />'
+		console.log(formString)
+		var p = document.createElement("p"); // Create a <p> element
+		var t = document.createTextNode(formString); // Create a text node
+		p.appendChild(t);
+		document.getElementById("listed").appendChild(p);
+		i++
+	}
+
+}
+
 // Get todo just enterd when user hits submit and add to array of others.
 // Put in local storage to isstays between reloads
 form.addEventListener("submit", (e) => {
@@ -19,15 +36,17 @@ form.addEventListener("submit", (e) => {
 	const stringed =JSON.stringify(todos)		// Turn array into string
 	localStorage.setItem("todos", stringed);	// Store in local storage
 
-    console.log(stringed)						// Display on console for debugging
+//    console.log(stringed)						// Display on console for debugging
 
-	const stringed1 = localStorage.getItem("todos"); // WANT TO OUTPUT ALL ENTRIES IN A BOX, WITH ID
+	const stringed1 = localStorage.getItem("todos");
 	todos = JSON.parse(stringed1)
 
-    todos.map((todo) => (
+    listtodos(stringed)
+
+//    todos.map((todo) => (
 //        <h1 key={todo.id} >{todo.text}</h1>  // ERROR
-        h3.innerText = todo.text
-))
+//        h3.innerText = todo.text
+//))
 
 });
 
