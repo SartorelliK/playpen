@@ -22,7 +22,9 @@
 
 .links {
     display: flex;
+    flex-direction: column;
     width: 20%;
+    text-align: center;
     justify-content: center;
     padding: 8px 4px;
     border: 1px solid lightgrey;
